@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <title>SecurePet</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Galada&family=Headland+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    
+    <style>
+
+        body{
+            margin:0;
+        }
+        .signin-grid{
+            display:grid;
+            grid-template-columns: 1fr 1fr;
+            height: 550px;
+            margin-top:150px;
+            gap:10px;
+        }
+
+        .stepsforward{
+            background-color: lightblue;
+        }
+
+        .signin-form{
+            background-color: rgb(255, 255, 255);
+            box-shadow: rgba(147, 133, 226, 0.5) 0 1px 30px;
+            border-radius: 10px;
+            
+            
+        }
+
+        .site-name{
+         font-family: Galada;
+         font-size: 30px;
+         margin-left: 250px;
+         
+        }
+
+        .signin-info{
+            margin-top: 130px;
+            margin-left: 200px;
+            gap: 7px;
+            display: grid;
+            
+            
+        }
+
+        .name, .surname, .email, .password, .confirm-password{
+            height: 50px;
+            width: 300px;
+            border-radius: 5px;
+            border-width: 0.5px;
+            
+        }
+
+        .line{
+            margin-left: 200px;
+        }
+
+        .signin-btn{
+            margin-top: 5px;
+            margin-left: 230px;
+            padding-left:100px;
+            padding-right:100px;
+            padding-top:5px;
+            padding-bottom:5px;
+            border-radius: 5px;
+            border-width:0.5px;
+            background-color: rgba(217, 218, 243, 1);
+
+        }
+
+        
+
+    </style>
+
+</head>
+
+</body>
+<div class ="signin-grid">
+   <div class="stepsforward">
+     <div class = "site-name">
+        <a>Securepet</a>
+     </div>
+
+     <div class = "steps">
+        <a>.</a>
+        <a>.</a>
+        <a>.</a>
+     </div>
+   </div>
+
+   <div class ="signin-form">
+    <div class = "signin-info">
+       
+        <input class = "name" type = "text" placeholder="Name">
+        <input class = "surname" type = "text" placeholder="Surname">
+        <input class = "email" type = "email" placeholder="Email">
+        <input class = "password" type = "password" placeholder="Password">
+        
+       
+    </div>
+
+   <br>
+   <a class = "line">---------------------------------------------------------</a>
+   <br>
+   <button class = "signin-btn">Sign in</button>
+
+    </div>
+ </div>
+
+ 
+</body>
+
+</html>

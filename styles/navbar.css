@@ -1,0 +1,21 @@
+.site-name{
+    font-family: Galada;
+    font-size: 30px;
+    padding-left: 30px;
+    text-decoration:none;
+    color:black;
+ }
+
+ .navbar{
+    display: grid;
+    grid-template-columns: 500px 1fr 1fr 1fr 550px;
+    margin-bottom: 70px;
+ }
+
+ .home, .adopt, .lost, .vet-services{
+    font-family:Montserrat;
+    font-size: 20px;
+    padding-top:15px;
+    text-decoration:none;
+    color:black;
+ }
