@@ -39,9 +39,7 @@
          
       }
 
-      .right-section{
-         background-color: lightpink;
-      }
+      
 
       .signup-btn, .login-btn{
          margin-top: 70px;
@@ -82,6 +80,7 @@
          display: grid;
          grid-template-columns: 1fr 1fr;
          object-fit: cover;
+         background-color: lightpink;
       }
       
    </style>
@@ -110,8 +109,8 @@
         
          
          <div class = "buttons">
-            <button class = "login-btn">log in</button> 
-            <button class = "signup-btn">Sign up</button>
+            <button class = "login-btn" onclick="window.location.href='signin.html'">log in</button> 
+            <button class = "signup-btn" onclick="window.location.href='signup.html'">Sign up</button>
          </div>
 
       </div>
