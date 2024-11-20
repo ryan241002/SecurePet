@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-    
     <title>SecurePet</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -9,111 +8,111 @@
     <link href="https://fonts.googleapis.com/css2?family=Galada&family=Headland+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     
     <style>
-
-        body{
-            margin:0;
-        }
-        .signin-grid{
-            display:grid;
-            grid-template-columns: 1fr 1fr;
-            height: 550px;
-            margin-top:150px;
-            gap:10px;
+        body {
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f5f5f5;
+            font-family: 'Montserrat', sans-serif;
         }
 
-        .stepsforward{
-            background-color: lightblue;
-        }
-
-        .signin-form{
-            background-color: rgb(255, 255, 255);
-            box-shadow: rgba(147, 133, 226, 0.5) 0 1px 30px;
+        .signin-form {
+            background-color: white;
+            padding: 2rem;
             border-radius: 10px;
-            
-            
+            box-shadow: 0 0 20px rgba(147, 133, 226, 0.2);
+            width: 100%;
+            max-width: 400px;
         }
 
-        .site-name{
-         font-family: Galada;
-         font-size: 30px;
-         margin-left: 250px;
-         
+        .site-name {
+            font-family: Galada;
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 2rem;
+            color: #333;
         }
 
-        .signin-info{
-            margin-top: 130px;
-            margin-left: 200px;
-            gap: 7px;
-            display: grid;
-            
-            
+        .signin-info form {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
         }
 
-        .name, .surname, .email, .password, .confirm-password{
+        .email, .password {
             height: 50px;
-            width: 300px;
-            border-radius: 5px;
-            border-width: 0.5px;
-            
+            width: 100%;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+            padding: 0 1rem;
+            font-size: 1rem;
+            box-sizing: border-box;
         }
 
-        .line{
-            margin-left: 200px;
+        .email:focus, .password:focus {
+            outline: none;
+            border-color: rgba(147, 133, 226, 0.5);
         }
 
-        .signin-btn{
-            margin-top: 5px;
-            margin-left: 230px;
-            padding-left:100px;
-            padding-right:100px;
-            padding-top:5px;
-            padding-bottom:5px;
-            border-radius: 5px;
-            border-width:0.5px;
-            background-color: rgba(217, 218, 243, 1);
-
+        .line {
+            display: block;
+            text-align: center;
+            color: #ddd;
+            margin: 1.5rem 0;
         }
 
-        
+        .signin-btn {
+            width: 100%;
+            padding: 1rem;
+            border-radius: 8px;
+            border: none;
+            background-color: rgba(147, 133, 226, 0.8);
+            color: white;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
 
+        .signin-btn:hover {
+            background-color: rgba(147, 133, 226, 1);
+        }
     </style>
 
 </head>
-
-</body>
-<div class ="signin-grid">
-   <div class="stepsforward">
-     <div class = "site-name">
-        <a>Securepet</a>
-     </div>
-
-     <div class = "steps">
-        <a>.</a>
-        <a>.</a>
-        <a>.</a>
-     </div>
-   </div>
-
-   <div class ="signin-form">
-    <div class = "signin-info">
-       
-        <input class = "name" type = "text" placeholder="Name">
-        <input class = "surname" type = "text" placeholder="Surname">
-        <input class = "email" type = "email" placeholder="Email">
-        <input class = "password" type = "password" placeholder="Password">
+<body>
+    <div class="signin-form">
+        <div class="site-name">
+            Securepet
+        </div>
         
-       
+        <div class="signin-info">
+            <form id="signupForm" method="POST" action="login.php">
+                <input class="email" type="email" name="email" id="email" placeholder="Email">
+                <input class="password" type="password" name="password" id="password" placeholder="Password">
+            </form>
+        </div>
+
+        <div class="line">──────────── or ────────────</div>
+        <button class="signin-btn" type="submit" form="signupForm" id="submitBtn">Sign in</button>
     </div>
 
-   <br>
-   <a class = "line">---------------------------------------------------------</a>
-   <br>
-   <button class = "signin-btn">Sign in</button>
+    <script>
+    document.getElementById("submitBtn").addEventListener("click", function(event) {
+        event.preventDefault();
 
-    </div>
- </div>
+        const email = document.getElementById("email").value;
+        const password = document.getElementById("password").value;
 
- 
+        if (!email || !password) {
+            alert("Please fill all fields.");
+            return;
+        }
+
+        document.getElementById("signupForm").submit();
+    });
+    </script>
+
 </body>
-
 </html>
